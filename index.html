@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokeDex Camps</title>
 
+    <!-- Links -->
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/index.js"></script>
+    <link rel="icon" href="/favicons/pokebola.png">
+
+    <!-- JS -->
+    <script defer src="/js/script.js"></script>
     </head>
     <body>
-        <h1>Pokedex Test</h1>
+        <img src="/images/PokedexCamps-20-03-2025.png" alt="PokedexCamps" class="PokedexCamps">
+        <main>
 
-        <div class="pokedex">
-            <div class="visor">
-                <div class="pokemon">
-                <img src="{{pokemonImage}}" alt="{{pokemonName}}" />
-                </div>
+            <img src="" alt="pokemon" class="pokemonImage" id="pokemonImage" hidden>
+
+            <h1 class="pokemonData">
+                <span class="pokemonNumber" id="pokemonNumber"></span> -
+                <span class="pokemonName" id="pokemonName"></span>
+            </h1>
+
+            <div class="pokemonInfos">
+                <small class="pokemonType" id="pokemonType"></small>
+                <small class="pokemonDescription" id="pokemonDescription"></small>
             </div>
-            <div class="informacoes">
-                <div class="nome">
-                <span id="pokemonName"></span>
-                </div>
-                <div class="tipo">
-                <span id="pokemonType"></span>
-                </div>
-                <div class="descricao">
-                <span id="pokemonDescription"></span>
-                </div>
+
+            <form class="form" id="form">
+                <input 
+                    type="search"
+                    class="inputSearch"
+                    placeholder="Nome do Pokemon ou número"
+                    id="inputSearch"
+                    required
+                />
+            </form>
+
+            <div class="buttons">
+                <button type="button" class="button btn-prev" id="btn-prev">&#60 Anterior</button>
+                <button type="button" class="button btn-next" id="btn-next">Próximo &#62</button>
             </div>
-        </div>
+
+            <img src="/images/pokedex.png" alt="pokedex" class="pokedex">
+        </main>
     </body>
 </html>
